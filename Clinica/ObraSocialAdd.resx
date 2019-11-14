@@ -117,14 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="blanco-grande1497438263" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blanco-grande1497438263.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mb-centromedico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mb-centromedico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_search_black_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\baseline_search_black_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAfhJREFUeF7t
+        3FFO5DAQRdHeALAcYOewAWA5wAbA1eJJrcik49gdV9n3SPWBNB+d+9AwGqGcAAAAAAAAAAAAAACo8JDu
+        Nd3j+asYntO9pLs7fxWYxf9I95PuM12EESz+dzr7zG/p7tOFdBlf532Ey/i693ThRsjF13kdIRdfF2qE
+        tfg6byOsxdeFGcF+4OYeYHlf6TyMsCW+zp7NPYtqcXMPsLzeI5TEj/KPiLMIIwwbXzyPMHx88TjCNPHF
+        0wjTxZfSEZ7StTZtfLGovUaYPr70GIH4C0eOQPx/HDEC8a8oHcGCbkX8jSxU6xGIX6jlCMTfqcUIxK9U
+        MwLxG9kzAvEbKwlqf474N1AywpYj/g6tRiB+hdoRiN/A3hGI31DpCMRvjAE64q+gjvgh3FFtfB0j7NAq
+        vo4RCpTEt7Al/3fECFeUxregdozQwJ74wgiVauILI+zUIr4wQqGW8YURNrpFfCkdoeaXv0K6ZXw54pe/
+        QjoivjDCwpHxhRH+9Igv04/QM76UjmCfeQge4ot9lqlG8BRfphnBY3wZfgTP8WXYESLElyFHsDdN5R5g
+        eb3jS8k3jD2be/ZKF3u1S+4BdF7iy5YR7O1ZYV5htjaCt/iyNkKo+JIbwWt8yY0QMr7YCNFf2jfEmxN5
+        bSUAAAAAAAAAAAAAYDKn0y9PgzBoX9CeZQAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>
