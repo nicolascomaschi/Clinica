@@ -4,54 +4,49 @@ using System.Windows.Forms;
 
 namespace Clinica
 {
-    public partial class ObraSocial : Form
+    public partial class Especialidad : Form
     {
-        private LObraSocial obj = new LObraSocial();
-        public ObraSocial()
+        LEspecialidad obj = new LEspecialidad(); 
+        public Especialidad()
         {
             InitializeComponent();
             Mostrar();
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Mostrar()
         {
-            obraSocialViewBindingSource.DataSource = null;
-            obraSocialViewBindingSource.DataSource = obj.Mostrar();
+            especialidadViewBindingSource.DataSource = null;
+            especialidadViewBindingSource.DataSource = obj.Mostrar();
         }
 
-        private void frmObraSocialAdd_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmEspecilidadAdd_FormClosed(object sender, FormClosedEventArgs e)
         {
             Mostrar();
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            ObraSocialAdd frm = new ObraSocialAdd(null);
-            frm.FormClosed += new FormClosedEventHandler(frmObraSocialAdd_FormClosed);
+            EspecilidadAdd frm = new EspecilidadAdd(null);
+            frm.FormClosed += new FormClosedEventHandler(frmEspecilidadAdd_FormClosed);
             frm.ShowDialog();
         }
 
         private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string msj;
-            ObraSocialView item = dataListado.Rows[e.RowIndex].DataBoundItem as ObraSocialView;
+            EspecialidadView item = dataListado.Rows[e.RowIndex].DataBoundItem as EspecialidadView;
             if (e.ColumnIndex == 0)
             {
                 DialogResult result = MessageBox.Show("Realmete desea eliminar el registro", "Clinica", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    msj = obj.Delete(item.idObraSocial);
+                    msj = obj.Delete(item.idEspecialidad);
                     MessageBox.Show(msj, "Clinica", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             if (e.ColumnIndex == 1)
             {
-                ObraSocialAdd frm = new ObraSocialAdd(item);
+                EspecilidadAdd frm = new EspecilidadAdd(item);
                 frm.ShowDialog();
             }
             Mostrar();
@@ -64,11 +59,11 @@ namespace Clinica
 
         private void BunifuImageButton1_Click(object sender, EventArgs e)
         {
-            obraSocialViewBindingSource.DataSource = null;
-            obraSocialViewBindingSource.DataSource = obj.Buscar(txtBuscar.Text);
+            especialidadViewBindingSource.DataSource = null;
+            especialidadViewBindingSource.DataSource = obj.Buscar(txtBuscar.Text);
         }
 
-        private void ObraSocial_Load(object sender, EventArgs e)
+        private void Especialidad_Load(object sender, EventArgs e)
         {
 
         }

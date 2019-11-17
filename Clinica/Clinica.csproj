@@ -59,6 +59,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Especialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidad.Designer.cs">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EspecilidadAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EspecilidadAdd.Designer.cs">
+      <DependentUpon>EspecilidadAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medico.Designer.cs">
+      <DependentUpon>Medico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicoAdd.Designer.cs">
+      <DependentUpon>MedicoAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObraSocial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +95,18 @@
     <Compile Include="ObraSocialAdd.Designer.cs">
       <DependentUpon>ObraSocialAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paciente.Designer.cs">
+      <DependentUpon>Paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacienteAdd.Designer.cs">
+      <DependentUpon>PacienteAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,11 +115,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Especialidad.resx">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EspecilidadAdd.resx">
+      <DependentUpon>EspecilidadAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medico.resx">
+      <DependentUpon>Medico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicoAdd.resx">
+      <DependentUpon>MedicoAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ObraSocial.resx">
       <DependentUpon>ObraSocial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObraSocialAdd.resx">
       <DependentUpon>ObraSocialAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paciente.resx">
+      <DependentUpon>Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacienteAdd.resx">
+      <DependentUpon>PacienteAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -94,7 +148,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Logica.EspecialidadView.datasource" />
+    <None Include="Properties\DataSources\Logica.MedicoView.datasource" />
     <None Include="Properties\DataSources\Logica.ObraSocialView.datasource" />
+    <None Include="Properties\DataSources\Logica.PacienteView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,9 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers.cs" />
+    <Compile Include="LEspecialidad.cs" />
+    <Compile Include="LMedico.cs" />
     <Compile Include="LObraSocial.cs" />
+    <Compile Include="LPaciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\EspecialidadView.cs" />
+    <Compile Include="Views\MedicoView.cs" />
     <Compile Include="Views\ObraSocialView.cs" />
+    <Compile Include="Views\PacienteView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

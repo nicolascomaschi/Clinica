@@ -26,7 +26,7 @@ namespace Datos
         public string apellido { get; set; }
         public int dni { get; set; }
         public Nullable<System.DateTime> fechaNac { get; set; }
-        public int telefono { get; set; }
+        public string telefono { get; set; }
         public string email { get; set; }
         public string alergias { get; set; }
         public string antecedentes { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ClinicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ClinicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Empleado">
           <Key>
             <PropertyRef Name="idEmpleado" />
@@ -13,7 +13,7 @@
           <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Apellido" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="dni" Type="int" Nullable="false" />
-          <Property Name="telefono" Type="int" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="50" />
           <Property Name="email" Type="nvarchar" MaxLength="50" />
           <Property Name="fechaIngreso" Type="date" Nullable="false" />
           <Property Name="idMedico" Type="int" />
@@ -43,7 +43,7 @@
           <Property Name="apellido" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="dni" Type="int" Nullable="false" />
           <Property Name="fechaNac" Type="date" />
-          <Property Name="telefono" Type="int" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="50" />
           <Property Name="email" Type="nvarchar" MaxLength="50" />
           <Property Name="idEspecialidad" Type="int" />
           <Property Name="fechaIngreso" Type="date" Nullable="false" />
@@ -65,7 +65,7 @@
           <Property Name="apellido" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="dni" Type="int" Nullable="false" />
           <Property Name="fechaNac" Type="date" />
-          <Property Name="telefono" Type="int" Nullable="false" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="50" />
           <Property Name="email" Type="nvarchar" MaxLength="50" />
           <Property Name="alergias" Type="nvarchar" MaxLength="256" />
           <Property Name="antecedentes" Type="nvarchar" MaxLength="256" />
@@ -355,8 +355,7 @@
             <End Role="Turno" EntitySet="Turno" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ClinicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -368,7 +367,7 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dni" Type="Int32" Nullable="false" />
-          <Property Name="telefono" Type="Int32" />
+          <Property Name="telefono" Type="String" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="idMedico" Type="Int32" />
@@ -403,7 +402,7 @@
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dni" Type="Int32" Nullable="false" />
           <Property Name="fechaNac" Type="DateTime" Precision="0" />
-          <Property Name="telefono" Type="Int32" />
+          <Property Name="telefono" Type="String" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="idEspecialidad" Type="Int32" />
           <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
@@ -430,7 +429,7 @@
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dni" Type="Int32" Nullable="false" />
           <Property Name="fechaNac" Type="DateTime" Precision="0" />
-          <Property Name="telefono" Type="Int32" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="alergias" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="antecedentes" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />

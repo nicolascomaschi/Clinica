@@ -34,5 +34,44 @@ namespace Clinica
         {
             Application.Exit();
         }
+
+        private void BunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (this.panelContenedor.Controls.Count > 0) this.panelContenedor.Controls.RemoveAt(0);
+            Especialidad form = Application.OpenForms.OfType<Especialidad>().FirstOrDefault();
+            Especialidad hijo1 = form ?? new Especialidad();
+            hijo1.TopLevel = false;
+            hijo1.FormBorderStyle = FormBorderStyle.None;
+            hijo1.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(hijo1);
+            this.panelContenedor.Tag = hijo1;
+            hijo1.Show();
+        }
+
+        private void BtnPacientes_Click(object sender, EventArgs e)
+        {
+            if (this.panelContenedor.Controls.Count > 0) this.panelContenedor.Controls.RemoveAt(0);
+            Paciente form = Application.OpenForms.OfType<Paciente>().FirstOrDefault();
+            Paciente hijo1 = form ?? new Paciente();
+            hijo1.TopLevel = false;
+            hijo1.FormBorderStyle = FormBorderStyle.None;
+            hijo1.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(hijo1);
+            this.panelContenedor.Tag = hijo1;
+            hijo1.Show();
+        }
+
+        private void BunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            if (this.panelContenedor.Controls.Count > 0) this.panelContenedor.Controls.RemoveAt(0);
+            Medico form = Application.OpenForms.OfType<Medico>().FirstOrDefault();
+            Medico hijo1 = form ?? new Medico();
+            hijo1.TopLevel = false;
+            hijo1.FormBorderStyle = FormBorderStyle.None;
+            hijo1.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(hijo1);
+            this.panelContenedor.Tag = hijo1;
+            hijo1.Show();
+        }
     }
 }

@@ -5,17 +5,16 @@ namespace Logica
 {
     public class Helpers
     {
-        public bool Guardar(ClinicaEntities ctx)
+        public string Guardar(ClinicaEntities ctx)
         {
             try
             {
                 ctx.SaveChanges();
-                return true;
+                return "OK";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                return ex.Message;
             }
         }
     }

@@ -4,15 +4,20 @@ using System.Windows.Forms;
 
 namespace Clinica
 {
-    public partial class ObraSocialAdd : Form
+    public partial class EspecilidadAdd : Form
     {
         private int? id;
-        private LObraSocial obj = new LObraSocial();
-        public ObraSocialAdd(ObraSocialView view)
+        private LEspecialidad obj = new LEspecialidad();
+        public EspecilidadAdd(EspecialidadView view)
         {
             InitializeComponent();
             ObjEqual(view);
             MostrarTitulo();
+        }
+
+        private void EspecilidadAdd_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -25,7 +30,7 @@ namespace Clinica
             }
             else
             {
-                msj = obj.Edit(id,txtNombre.Text, txtDetalle.Text);
+                msj = obj.Edit(id, txtNombre.Text, txtDetalle.Text);
                 MessageBox.Show(msj, "Clinica", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             this.Close();
@@ -45,12 +50,12 @@ namespace Clinica
             }
         }
 
-        private void ObjEqual(ObraSocialView view)
+        private void ObjEqual(EspecialidadView view)
         {
             if (view != null)
             {
-                this.id = view.idObraSocial;
-                txtDetalle.Text = view.detalles;
+                this.id = view.idEspecialidad;
+                txtDetalle.Text = view.detalle;
                 txtNombre.Text = view.nombre;
             }
         }

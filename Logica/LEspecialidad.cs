@@ -5,30 +5,30 @@ using System.Linq;
 
 namespace Logica
 {
-    public class LObraSocial
+    public class LEspecialidad
     {
         ClinicaEntities ctx = new ClinicaEntities();
-        public List<ObraSocialView> Mostrar()
+        public List<EspecialidadView> Mostrar()
         {
-            var list = from os in ctx.ObraSocial
-                       select new ObraSocialView
+            var list = from e in ctx.Especialidad
+                       select new EspecialidadView
                        {
-                           idObraSocial = os.idObraSocial,
-                           detalles = os.detalles,
-                           nombre = os.nombre,
+                           idEspecialidad = e.idEspecialidad,
+                           detalle = e.detalles,
+                           nombre = e.nombre,
                        };
             return list.ToList();
         }
 
-        public List<ObraSocialView> Buscar(string obraSocial)
+        public List<EspecialidadView> Buscar(string especialidad)
         {
-            var list = from os in ctx.ObraSocial
-                       where os.nombre.Contains(obraSocial)
-                       select new ObraSocialView
+            var list = from e in ctx.Especialidad
+                       where e.nombre.Contains(especialidad)
+                       select new EspecialidadView
                        {
-                           idObraSocial = os.idObraSocial,
-                           detalles = os.detalles,
-                           nombre = os.nombre,
+                           idEspecialidad = e.idEspecialidad,
+                           detalle = e.detalles,
+                           nombre = e.nombre,
                        };
             return list.ToList();
         }
@@ -37,12 +37,12 @@ namespace Logica
         {
             try
             {
-                ObraSocial obraSocial = new ObraSocial
+                Especialidad especialidad = new Especialidad
                 {
                     nombre = nombre,
                     detalles = detalle,
                 };
-                ctx.ObraSocial.Add(obraSocial);
+                ctx.Especialidad.Add(especialidad);
                 ctx.SaveChanges();
                 return "La operacion se realizo correctamente";
             }
@@ -56,15 +56,15 @@ namespace Logica
         {
             try
             {
-                ObraSocial obraSocial = new ObraSocial
+                Especialidad especialidad = new Especialidad
                 {
-                    idObraSocial = id ?? 0,
+                    idEspecialidad = id ?? 0,
                     nombre = nombre,
                     detalles = detalle,
                 };
-                if (obraSocial.idObraSocial != 0)
+                if (especialidad.idEspecialidad != 0)
                 {
-                    ctx.Entry(obraSocial).State = System.Data.Entity.EntityState.Modified;
+                    ctx.Entry(especialidad).State = System.Data.Entity.EntityState.Modified;
                     ctx.SaveChanges();
                     return "La operacion se realizo correctamente";
                 }
@@ -80,8 +80,8 @@ namespace Logica
         {
             try
             {
-                var obj = ctx.ObraSocial.Where(os => os.idObraSocial == id).First();
-                ctx.ObraSocial.Remove(obj);
+                var obj = ctx.Especialidad.Where(os => os.idEspecialidad == id).First();
+                ctx.Especialidad.Remove(obj);
                 ctx.SaveChanges();
                 return "La operacion se realizo correctamente";
             }
