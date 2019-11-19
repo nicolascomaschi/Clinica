@@ -59,6 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado.Designer.cs">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoAdd.Designer.cs">
+      <DependentUpon>EmpleadoAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Especialidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoAdd.resx">
+      <DependentUpon>EmpleadoAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Especialidad.resx">
       <DependentUpon>Especialidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +166,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Logica.EmpleadoView.datasource" />
     <None Include="Properties\DataSources\Logica.EspecialidadView.datasource" />
     <None Include="Properties\DataSources\Logica.MedicoView.datasource" />
     <None Include="Properties\DataSources\Logica.ObraSocialView.datasource" />

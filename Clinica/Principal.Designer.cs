@@ -32,13 +32,14 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnObraSocial = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMedico = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnMedico = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEmpleado = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,7 +74,7 @@
             this.btnObraSocial.IconVisible = true;
             this.btnObraSocial.IconZoom = 90D;
             this.btnObraSocial.IsTab = false;
-            this.btnObraSocial.Location = new System.Drawing.Point(3, 79);
+            this.btnObraSocial.Location = new System.Drawing.Point(3, 535);
             this.btnObraSocial.Name = "btnObraSocial";
             this.btnObraSocial.Normalcolor = System.Drawing.Color.MidnightBlue;
             this.btnObraSocial.OnHovercolor = System.Drawing.Color.CornflowerBlue;
@@ -92,11 +93,12 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.btnMedico, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnObraSocial, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btnEmpleado, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.bunifuFlatButton1, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnMedico, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnPacientes, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuFlatButton1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnObraSocial, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -111,6 +113,53 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(158, 611);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // btnMedico
+            // 
+            this.btnMedico.Activecolor = System.Drawing.Color.CornflowerBlue;
+            this.btnMedico.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnMedico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMedico.BorderRadius = 0;
+            this.btnMedico.ButtonText = "Medicos";
+            this.btnMedico.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMedico.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMedico.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMedico.Iconimage = null;
+            this.btnMedico.Iconimage_right = null;
+            this.btnMedico.Iconimage_right_Selected = null;
+            this.btnMedico.Iconimage_Selected = null;
+            this.btnMedico.IconMarginLeft = 0;
+            this.btnMedico.IconMarginRight = 0;
+            this.btnMedico.IconRightVisible = true;
+            this.btnMedico.IconRightZoom = 0D;
+            this.btnMedico.IconVisible = true;
+            this.btnMedico.IconZoom = 90D;
+            this.btnMedico.IsTab = false;
+            this.btnMedico.Location = new System.Drawing.Point(3, 307);
+            this.btnMedico.Name = "btnMedico";
+            this.btnMedico.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnMedico.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnMedico.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMedico.selected = false;
+            this.btnMedico.Size = new System.Drawing.Size(158, 70);
+            this.btnMedico.TabIndex = 4;
+            this.btnMedico.Text = "Medicos";
+            this.btnMedico.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMedico.Textcolor = System.Drawing.Color.White;
+            this.btnMedico.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedico.Click += new System.EventHandler(this.BunifuFlatButton2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Clinica.Properties.Resources.mb_centromedico;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 70);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // btnPacientes
             // 
@@ -147,18 +196,6 @@
             this.btnPacientes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPacientes.Click += new System.EventHandler(this.BtnPacientes_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Clinica.Properties.Resources.mb_centromedico;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 70);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.CornflowerBlue;
@@ -180,7 +217,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(3, 155);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(3, 459);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.MidnightBlue;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.CornflowerBlue;
@@ -229,40 +266,40 @@
             this.btnExit.Zoom = 10;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // btnMedico
+            // btnEmpleado
             // 
-            this.btnMedico.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnMedico.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnMedico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMedico.BorderRadius = 0;
-            this.btnMedico.ButtonText = "Medicos";
-            this.btnMedico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMedico.DisabledColor = System.Drawing.Color.Gray;
-            this.btnMedico.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnMedico.Iconimage = null;
-            this.btnMedico.Iconimage_right = null;
-            this.btnMedico.Iconimage_right_Selected = null;
-            this.btnMedico.Iconimage_Selected = null;
-            this.btnMedico.IconMarginLeft = 0;
-            this.btnMedico.IconMarginRight = 0;
-            this.btnMedico.IconRightVisible = true;
-            this.btnMedico.IconRightZoom = 0D;
-            this.btnMedico.IconVisible = true;
-            this.btnMedico.IconZoom = 90D;
-            this.btnMedico.IsTab = false;
-            this.btnMedico.Location = new System.Drawing.Point(3, 307);
-            this.btnMedico.Name = "btnMedico";
-            this.btnMedico.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnMedico.OnHovercolor = System.Drawing.Color.CornflowerBlue;
-            this.btnMedico.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnMedico.selected = false;
-            this.btnMedico.Size = new System.Drawing.Size(158, 70);
-            this.btnMedico.TabIndex = 4;
-            this.btnMedico.Text = "Medicos";
-            this.btnMedico.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMedico.Textcolor = System.Drawing.Color.White;
-            this.btnMedico.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedico.Click += new System.EventHandler(this.BunifuFlatButton2_Click);
+            this.btnEmpleado.Activecolor = System.Drawing.Color.CornflowerBlue;
+            this.btnEmpleado.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEmpleado.BorderRadius = 0;
+            this.btnEmpleado.ButtonText = "Empleados";
+            this.btnEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleado.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEmpleado.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEmpleado.Iconimage = null;
+            this.btnEmpleado.Iconimage_right = null;
+            this.btnEmpleado.Iconimage_right_Selected = null;
+            this.btnEmpleado.Iconimage_Selected = null;
+            this.btnEmpleado.IconMarginLeft = 0;
+            this.btnEmpleado.IconMarginRight = 0;
+            this.btnEmpleado.IconRightVisible = true;
+            this.btnEmpleado.IconRightZoom = 0D;
+            this.btnEmpleado.IconVisible = true;
+            this.btnEmpleado.IconZoom = 90D;
+            this.btnEmpleado.IsTab = false;
+            this.btnEmpleado.Location = new System.Drawing.Point(3, 383);
+            this.btnEmpleado.Name = "btnEmpleado";
+            this.btnEmpleado.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnEmpleado.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnEmpleado.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEmpleado.selected = false;
+            this.btnEmpleado.Size = new System.Drawing.Size(158, 70);
+            this.btnEmpleado.TabIndex = 5;
+            this.btnEmpleado.Text = "Empleados";
+            this.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEmpleado.Textcolor = System.Drawing.Color.White;
+            this.btnEmpleado.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
             // 
             // Principal
             // 
@@ -297,5 +334,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btnPacientes;
         private Bunifu.Framework.UI.BunifuFlatButton btnMedico;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEmpleado;
     }
 }

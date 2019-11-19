@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace Clinica
 {
-    public partial class Medico : Form
+    public partial class Empleado : Form
     {
-        LMedico obj = new LMedico(); 
-        public Medico()
+        LEmpleado obj = new LEmpleado();
+        public Empleado()
         {
             InitializeComponent();
             Mostrar();
@@ -20,26 +20,26 @@ namespace Clinica
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            MedicoAdd frm = new MedicoAdd(null);
-            frm.FormClosed += new FormClosedEventHandler(frmMedicoAdd_FormClosed);
+            EmpleadoAdd frm = new EmpleadoAdd(null);
+            frm.FormClosed += new FormClosedEventHandler(frmEmpleadoAdd_FormClosed);
             frm.ShowDialog();
         }
 
-        private void frmMedicoAdd_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmEmpleadoAdd_FormClosed(object sender, FormClosedEventArgs e)
         {
             Mostrar();
         }
 
         private void Mostrar()
         {
-            medicoViewBindingSource.DataSource = null;
-            medicoViewBindingSource.DataSource = obj.Mostrar();
+            empleadoViewBindingSource.DataSource = null;
+            empleadoViewBindingSource.DataSource = obj.Mostrar();
         }
 
         private void DataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string msj;
-            MedicoView item = dataListado.Rows[e.RowIndex].DataBoundItem as MedicoView;
+            EmpleadoView item = dataListado.Rows[e.RowIndex].DataBoundItem as EmpleadoView;
             if (e.ColumnIndex == 0)
             {
                 DialogResult result = MessageBox.Show("Realmete desea eliminar el registro", "Clinica", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -51,7 +51,7 @@ namespace Clinica
             }
             if (e.ColumnIndex == 1)
             {
-                MedicoAdd frm = new MedicoAdd(item);
+                EmpleadoAdd frm = new EmpleadoAdd(item);
                 frm.ShowDialog();
             }
             Mostrar();
@@ -64,8 +64,8 @@ namespace Clinica
 
         private void BunifuImageButton1_Click(object sender, EventArgs e)
         {
-            medicoViewBindingSource.DataSource = null;
-            medicoViewBindingSource.DataSource = obj.Buscar(txtBuscar.Text);
+            empleadoViewBindingSource.DataSource = null;
+            empleadoViewBindingSource.DataSource = obj.Buscar(txtBuscar.Text);
         }
     }
 }
