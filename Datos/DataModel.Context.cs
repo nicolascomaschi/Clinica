@@ -31,7 +31,6 @@ namespace Datos
         public virtual DbSet<Medico> Medico { get; set; }
         public virtual DbSet<ObraSocial> ObraSocial { get; set; }
         public virtual DbSet<Paciente> Paciente { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tratamiento> Tratamiento { get; set; }
         public virtual DbSet<TratamientoDetalle> TratamientoDetalle { get; set; }
         public virtual DbSet<TratamientoDetalleMedicamento> TratamientoDetalleMedicamento { get; set; }

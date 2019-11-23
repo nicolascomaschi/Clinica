@@ -83,6 +83,16 @@ namespace Clinica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_add_white_48dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_add_white_48dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mb_centromedico {
             get {
                 object obj = ResourceManager.GetObject("mb-centromedico", resourceCulture);

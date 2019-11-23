@@ -86,5 +86,18 @@ namespace Clinica
             this.panelContenedor.Tag = hijo1;
             hijo1.Show();
         }
+
+        private void BtnTurnos_Click(object sender, EventArgs e)
+        {
+            if (this.panelContenedor.Controls.Count > 0) this.panelContenedor.Controls.RemoveAt(0);
+            Turno form = Application.OpenForms.OfType<Turno>().FirstOrDefault();
+            Turno hijo1 = form ?? new Turno();
+            hijo1.TopLevel = false;
+            hijo1.FormBorderStyle = FormBorderStyle.None;
+            hijo1.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(hijo1);
+            this.panelContenedor.Tag = hijo1;
+            hijo1.Show();
+        }
     }
 }

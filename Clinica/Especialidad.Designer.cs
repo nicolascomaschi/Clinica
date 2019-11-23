@@ -223,6 +223,7 @@
             this.btnExit.TabIndex = 56;
             this.btnExit.TabStop = false;
             this.btnExit.Zoom = 10;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // Especialidad
             // 

@@ -116,5 +116,11 @@ namespace Logica
                 return ex.Message;
             }
         }
+
+        public int RecuperarUltimo()
+        {
+            var obj = ctx.Empleado.FirstOrDefault();
+            return obj.idEmpleado;
+        }
     }
 }

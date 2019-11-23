@@ -15,8 +15,8 @@ namespace Datos
     public partial class Turno
     {
         public int idTurno { get; set; }
-        public System.DateTime fechaInicio { get; set; }
-        public System.DateTime fechaFin { get; set; }
+        public System.DateTime fecha { get; set; }
+        public string hora { get; set; }
         public string detalles { get; set; }
         public int idPaciente { get; set; }
         public int idMedico { get; set; }

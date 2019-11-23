@@ -11,9 +11,9 @@ namespace Clinica
         public PacienteAdd(PacienteView view)
         {
             InitializeComponent();
-            ObjEqual(view);
             MostrarTitulo();
             LlenarCombo();
+            ObjEqual(view);
         }
 
         private void BunifuImageButton1_Click(object sender, EventArgs e)

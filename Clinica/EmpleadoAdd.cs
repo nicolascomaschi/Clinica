@@ -11,9 +11,9 @@ namespace Clinica
         public EmpleadoAdd(EmpleadoView view)
         {
             InitializeComponent();
-            ObjEqual(view);
             MostrarTitulo();
             LlenarCombo();
+            ObjEqual(view);
         }
         private void MostrarTitulo()
         {

@@ -11,9 +11,9 @@ namespace Clinica
         public MedicoAdd(MedicoView view)
         {
             InitializeComponent();
-            ObjEqual(view);
             MostrarTitulo();
             LlenarCombo();
+            ObjEqual(view);
         }
 
         private void MedicoAdd_Load(object sender, EventArgs e)

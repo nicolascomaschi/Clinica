@@ -67,5 +67,10 @@ namespace Clinica
         {
 
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

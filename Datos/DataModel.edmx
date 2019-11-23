@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ClinicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ClinicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Empleado">
           <Key>
             <PropertyRef Name="idEmpleado" />
@@ -71,16 +71,6 @@
           <Property Name="antecedentes" Type="nvarchar" MaxLength="256" />
           <Property Name="idObraSocial" Type="int" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="Tratamiento">
           <Key>
             <PropertyRef Name="idTratamiento" />
@@ -125,8 +115,8 @@
             <PropertyRef Name="idTurno" />
           </Key>
           <Property Name="idTurno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fechaInicio" Type="datetime" Nullable="false" />
-          <Property Name="fechaFin" Type="datetime" Nullable="false" />
+          <Property Name="fecha" Type="datetime" Nullable="false" />
+          <Property Name="hora" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="detalles" Type="nvarchar" MaxLength="256" />
           <Property Name="idPaciente" Type="int" Nullable="false" />
           <Property Name="idMedico" Type="int" Nullable="false" />
@@ -296,7 +286,6 @@
           <EntitySet Name="Medico" EntityType="Self.Medico" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ObraSocial" EntityType="Self.ObraSocial" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paciente" EntityType="Self.Paciente" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tratamiento" EntityType="Self.Tratamiento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TratamientoDetalle" EntityType="Self.TratamientoDetalle" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TratamientoDetalleMedicamento" EntityType="Self.TratamientoDetalleMedicamento" Schema="dbo" store:Type="Tables" />
@@ -355,7 +344,8 @@
             <End Role="Turno" EntitySet="Turno" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ClinicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -367,7 +357,7 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dni" Type="Int32" Nullable="false" />
-          <Property Name="telefono" Type="String" />
+          <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="idMedico" Type="Int32" />
@@ -402,7 +392,7 @@
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dni" Type="Int32" Nullable="false" />
           <Property Name="fechaNac" Type="DateTime" Precision="0" />
-          <Property Name="telefono" Type="String" />
+          <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="idEspecialidad" Type="Int32" />
           <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
@@ -429,7 +419,7 @@
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dni" Type="Int32" Nullable="false" />
           <Property Name="fechaNac" Type="DateTime" Precision="0" />
-          <Property Name="telefono" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="alergias" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="antecedentes" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
@@ -437,16 +427,6 @@
           <NavigationProperty Name="ObraSocial" Relationship="Self.FK_Paciente_ObraSocial" FromRole="Paciente" ToRole="ObraSocial" />
           <NavigationProperty Name="Tratamiento" Relationship="Self.FK_Tratamiento_Paciente" FromRole="Paciente" ToRole="Tratamiento" />
           <NavigationProperty Name="Turno" Relationship="Self.FK_Turno_Paciente" FromRole="Paciente" ToRole="Turno" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Tratamiento">
           <Key>
@@ -502,8 +482,8 @@
             <PropertyRef Name="idTurno" />
           </Key>
           <Property Name="idTurno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="hora" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="detalles" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="idPaciente" Type="Int32" Nullable="false" />
           <Property Name="idMedico" Type="Int32" Nullable="false" />
@@ -676,7 +656,6 @@
           <EntitySet Name="Medico" EntityType="Self.Medico" />
           <EntitySet Name="ObraSocial" EntityType="Self.ObraSocial" />
           <EntitySet Name="Paciente" EntityType="Self.Paciente" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Tratamiento" EntityType="Self.Tratamiento" />
           <EntitySet Name="TratamientoDetalle" EntityType="Self.TratamientoDetalle" />
           <EntitySet Name="TratamientoDetalleMedicamento" EntityType="Self.TratamientoDetalleMedicamento" />
@@ -813,17 +792,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="ClinicaModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Tratamiento">
             <EntityTypeMapping TypeName="ClinicaModel.Tratamiento">
               <MappingFragment StoreEntitySet="Tratamiento">
@@ -871,8 +839,8 @@
             <EntityTypeMapping TypeName="ClinicaModel.Turno">
               <MappingFragment StoreEntitySet="Turno">
                 <ScalarProperty Name="idTurno" ColumnName="idTurno" />
-                <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
-                <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="hora" ColumnName="hora" />
                 <ScalarProperty Name="detalles" ColumnName="detalles" />
                 <ScalarProperty Name="idPaciente" ColumnName="idPaciente" />
                 <ScalarProperty Name="idMedico" ColumnName="idMedico" />
