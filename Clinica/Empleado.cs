@@ -45,7 +45,7 @@ namespace Clinica
                 DialogResult result = MessageBox.Show("Realmete desea eliminar el registro", "Clinica", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    msj = obj.Delete(item.idMedico);
+                    msj = obj.Delete(item.idEmpleado);
                     MessageBox.Show(msj, "Clinica", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

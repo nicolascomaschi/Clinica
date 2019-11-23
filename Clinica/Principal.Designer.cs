@@ -32,23 +32,23 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnObraSocial = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTurnos = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMedicamento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEmpleado = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTratamiento = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMedico = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTurnos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTratamiento = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnMedicamento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
@@ -121,75 +121,40 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(158, 611);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // btnTurnos
+            // btnMedicamento
             // 
-            this.btnTurnos.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnTurnos.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnTurnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTurnos.BorderRadius = 0;
-            this.btnTurnos.ButtonText = "Turnos";
-            this.btnTurnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTurnos.DisabledColor = System.Drawing.Color.Gray;
-            this.btnTurnos.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTurnos.Iconimage = null;
-            this.btnTurnos.Iconimage_right = null;
-            this.btnTurnos.Iconimage_right_Selected = null;
-            this.btnTurnos.Iconimage_Selected = null;
-            this.btnTurnos.IconMarginLeft = 0;
-            this.btnTurnos.IconMarginRight = 0;
-            this.btnTurnos.IconRightVisible = true;
-            this.btnTurnos.IconRightZoom = 0D;
-            this.btnTurnos.IconVisible = true;
-            this.btnTurnos.IconZoom = 90D;
-            this.btnTurnos.IsTab = false;
-            this.btnTurnos.Location = new System.Drawing.Point(3, 155);
-            this.btnTurnos.Name = "btnTurnos";
-            this.btnTurnos.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnTurnos.OnHovercolor = System.Drawing.Color.CornflowerBlue;
-            this.btnTurnos.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnTurnos.selected = false;
-            this.btnTurnos.Size = new System.Drawing.Size(158, 70);
-            this.btnTurnos.TabIndex = 4;
-            this.btnTurnos.Text = "Turnos";
-            this.btnTurnos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTurnos.Textcolor = System.Drawing.Color.White;
-            this.btnTurnos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnos.Click += new System.EventHandler(this.BtnTurnos_Click);
-            // 
-            // btnPacientes
-            // 
-            this.btnPacientes.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnPacientes.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnPacientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPacientes.BorderRadius = 0;
-            this.btnPacientes.ButtonText = "Pacientes";
-            this.btnPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPacientes.DisabledColor = System.Drawing.Color.Gray;
-            this.btnPacientes.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPacientes.Iconimage = null;
-            this.btnPacientes.Iconimage_right = null;
-            this.btnPacientes.Iconimage_right_Selected = null;
-            this.btnPacientes.Iconimage_Selected = null;
-            this.btnPacientes.IconMarginLeft = 0;
-            this.btnPacientes.IconMarginRight = 0;
-            this.btnPacientes.IconRightVisible = true;
-            this.btnPacientes.IconRightZoom = 0D;
-            this.btnPacientes.IconVisible = true;
-            this.btnPacientes.IconZoom = 90D;
-            this.btnPacientes.IsTab = false;
-            this.btnPacientes.Location = new System.Drawing.Point(3, 231);
-            this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnPacientes.OnHovercolor = System.Drawing.Color.CornflowerBlue;
-            this.btnPacientes.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPacientes.selected = false;
-            this.btnPacientes.Size = new System.Drawing.Size(158, 70);
-            this.btnPacientes.TabIndex = 3;
-            this.btnPacientes.Text = "Pacientes";
-            this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPacientes.Textcolor = System.Drawing.Color.White;
-            this.btnPacientes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.Click += new System.EventHandler(this.BtnPacientes_Click);
+            this.btnMedicamento.Activecolor = System.Drawing.Color.CornflowerBlue;
+            this.btnMedicamento.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnMedicamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMedicamento.BorderRadius = 0;
+            this.btnMedicamento.ButtonText = "Medicamentos";
+            this.btnMedicamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMedicamento.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMedicamento.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMedicamento.Iconimage = null;
+            this.btnMedicamento.Iconimage_right = null;
+            this.btnMedicamento.Iconimage_right_Selected = null;
+            this.btnMedicamento.Iconimage_Selected = null;
+            this.btnMedicamento.IconMarginLeft = 0;
+            this.btnMedicamento.IconMarginRight = 0;
+            this.btnMedicamento.IconRightVisible = true;
+            this.btnMedicamento.IconRightZoom = 0D;
+            this.btnMedicamento.IconVisible = true;
+            this.btnMedicamento.IconZoom = 90D;
+            this.btnMedicamento.IsTab = false;
+            this.btnMedicamento.Location = new System.Drawing.Point(3, 307);
+            this.btnMedicamento.Name = "btnMedicamento";
+            this.btnMedicamento.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnMedicamento.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnMedicamento.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMedicamento.selected = false;
+            this.btnMedicamento.Size = new System.Drawing.Size(158, 70);
+            this.btnMedicamento.TabIndex = 6;
+            this.btnMedicamento.Text = "Medicamentos";
+            this.btnMedicamento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMedicamento.Textcolor = System.Drawing.Color.White;
+            this.btnMedicamento.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedicamento.Click += new System.EventHandler(this.BtnMedicamento_Click);
             // 
             // btnEmpleado
             // 
@@ -225,6 +190,55 @@
             this.btnEmpleado.Textcolor = System.Drawing.Color.White;
             this.btnEmpleado.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
+            // 
+            // btnTratamiento
+            // 
+            this.btnTratamiento.Activecolor = System.Drawing.Color.CornflowerBlue;
+            this.btnTratamiento.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnTratamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTratamiento.BorderRadius = 0;
+            this.btnTratamiento.ButtonText = "Tratamientos";
+            this.btnTratamiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTratamiento.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTratamiento.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTratamiento.Iconimage = null;
+            this.btnTratamiento.Iconimage_right = null;
+            this.btnTratamiento.Iconimage_right_Selected = null;
+            this.btnTratamiento.Iconimage_Selected = null;
+            this.btnTratamiento.IconMarginLeft = 0;
+            this.btnTratamiento.IconMarginRight = 0;
+            this.btnTratamiento.IconRightVisible = true;
+            this.btnTratamiento.IconRightZoom = 0D;
+            this.btnTratamiento.IconVisible = true;
+            this.btnTratamiento.IconZoom = 90D;
+            this.btnTratamiento.IsTab = false;
+            this.btnTratamiento.Location = new System.Drawing.Point(3, 79);
+            this.btnTratamiento.Name = "btnTratamiento";
+            this.btnTratamiento.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnTratamiento.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnTratamiento.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTratamiento.selected = false;
+            this.btnTratamiento.Size = new System.Drawing.Size(158, 70);
+            this.btnTratamiento.TabIndex = 5;
+            this.btnTratamiento.Text = "Tratamientos";
+            this.btnTratamiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTratamiento.Textcolor = System.Drawing.Color.White;
+            this.btnTratamiento.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.bunifuFlatButton1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnObraSocial, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 535);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(158, 73);
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // bunifuFlatButton1
             // 
@@ -308,6 +322,76 @@
             this.btnMedico.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMedico.Click += new System.EventHandler(this.BunifuFlatButton2_Click);
             // 
+            // btnTurnos
+            // 
+            this.btnTurnos.Activecolor = System.Drawing.Color.CornflowerBlue;
+            this.btnTurnos.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnTurnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTurnos.BorderRadius = 0;
+            this.btnTurnos.ButtonText = "Turnos";
+            this.btnTurnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTurnos.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTurnos.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTurnos.Iconimage = null;
+            this.btnTurnos.Iconimage_right = null;
+            this.btnTurnos.Iconimage_right_Selected = null;
+            this.btnTurnos.Iconimage_Selected = null;
+            this.btnTurnos.IconMarginLeft = 0;
+            this.btnTurnos.IconMarginRight = 0;
+            this.btnTurnos.IconRightVisible = true;
+            this.btnTurnos.IconRightZoom = 0D;
+            this.btnTurnos.IconVisible = true;
+            this.btnTurnos.IconZoom = 90D;
+            this.btnTurnos.IsTab = false;
+            this.btnTurnos.Location = new System.Drawing.Point(3, 155);
+            this.btnTurnos.Name = "btnTurnos";
+            this.btnTurnos.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnTurnos.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnTurnos.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTurnos.selected = false;
+            this.btnTurnos.Size = new System.Drawing.Size(158, 70);
+            this.btnTurnos.TabIndex = 4;
+            this.btnTurnos.Text = "Turnos";
+            this.btnTurnos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTurnos.Textcolor = System.Drawing.Color.White;
+            this.btnTurnos.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTurnos.Click += new System.EventHandler(this.BtnTurnos_Click);
+            // 
+            // btnPacientes
+            // 
+            this.btnPacientes.Activecolor = System.Drawing.Color.CornflowerBlue;
+            this.btnPacientes.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnPacientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPacientes.BorderRadius = 0;
+            this.btnPacientes.ButtonText = "Pacientes";
+            this.btnPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPacientes.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPacientes.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPacientes.Iconimage = null;
+            this.btnPacientes.Iconimage_right = null;
+            this.btnPacientes.Iconimage_right_Selected = null;
+            this.btnPacientes.Iconimage_Selected = null;
+            this.btnPacientes.IconMarginLeft = 0;
+            this.btnPacientes.IconMarginRight = 0;
+            this.btnPacientes.IconRightVisible = true;
+            this.btnPacientes.IconRightZoom = 0D;
+            this.btnPacientes.IconVisible = true;
+            this.btnPacientes.IconZoom = 90D;
+            this.btnPacientes.IsTab = false;
+            this.btnPacientes.Location = new System.Drawing.Point(3, 231);
+            this.btnPacientes.Name = "btnPacientes";
+            this.btnPacientes.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnPacientes.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnPacientes.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPacientes.selected = false;
+            this.btnPacientes.Size = new System.Drawing.Size(158, 70);
+            this.btnPacientes.TabIndex = 3;
+            this.btnPacientes.Text = "Pacientes";
+            this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPacientes.Textcolor = System.Drawing.Color.White;
+            this.btnPacientes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPacientes.Click += new System.EventHandler(this.BtnPacientes_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
@@ -343,89 +427,6 @@
             this.btnExit.Zoom = 10;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.bunifuFlatButton1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnObraSocial, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 535);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(158, 73);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // btnTratamiento
-            // 
-            this.btnTratamiento.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnTratamiento.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnTratamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTratamiento.BorderRadius = 0;
-            this.btnTratamiento.ButtonText = "Tratamientos";
-            this.btnTratamiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTratamiento.DisabledColor = System.Drawing.Color.Gray;
-            this.btnTratamiento.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTratamiento.Iconimage = null;
-            this.btnTratamiento.Iconimage_right = null;
-            this.btnTratamiento.Iconimage_right_Selected = null;
-            this.btnTratamiento.Iconimage_Selected = null;
-            this.btnTratamiento.IconMarginLeft = 0;
-            this.btnTratamiento.IconMarginRight = 0;
-            this.btnTratamiento.IconRightVisible = true;
-            this.btnTratamiento.IconRightZoom = 0D;
-            this.btnTratamiento.IconVisible = true;
-            this.btnTratamiento.IconZoom = 90D;
-            this.btnTratamiento.IsTab = false;
-            this.btnTratamiento.Location = new System.Drawing.Point(3, 79);
-            this.btnTratamiento.Name = "btnTratamiento";
-            this.btnTratamiento.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnTratamiento.OnHovercolor = System.Drawing.Color.CornflowerBlue;
-            this.btnTratamiento.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnTratamiento.selected = false;
-            this.btnTratamiento.Size = new System.Drawing.Size(158, 70);
-            this.btnTratamiento.TabIndex = 5;
-            this.btnTratamiento.Text = "Tratamientos";
-            this.btnTratamiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTratamiento.Textcolor = System.Drawing.Color.White;
-            this.btnTratamiento.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnMedicamento
-            // 
-            this.btnMedicamento.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnMedicamento.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnMedicamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMedicamento.BorderRadius = 0;
-            this.btnMedicamento.ButtonText = "Medicamentos";
-            this.btnMedicamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMedicamento.DisabledColor = System.Drawing.Color.Gray;
-            this.btnMedicamento.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnMedicamento.Iconimage = null;
-            this.btnMedicamento.Iconimage_right = null;
-            this.btnMedicamento.Iconimage_right_Selected = null;
-            this.btnMedicamento.Iconimage_Selected = null;
-            this.btnMedicamento.IconMarginLeft = 0;
-            this.btnMedicamento.IconMarginRight = 0;
-            this.btnMedicamento.IconRightVisible = true;
-            this.btnMedicamento.IconRightZoom = 0D;
-            this.btnMedicamento.IconVisible = true;
-            this.btnMedicamento.IconZoom = 90D;
-            this.btnMedicamento.IsTab = false;
-            this.btnMedicamento.Location = new System.Drawing.Point(3, 307);
-            this.btnMedicamento.Name = "btnMedicamento";
-            this.btnMedicamento.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnMedicamento.OnHovercolor = System.Drawing.Color.CornflowerBlue;
-            this.btnMedicamento.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnMedicamento.selected = false;
-            this.btnMedicamento.Size = new System.Drawing.Size(158, 70);
-            this.btnMedicamento.TabIndex = 6;
-            this.btnMedicamento.Text = "Medicamentos";
-            this.btnMedicamento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMedicamento.Textcolor = System.Drawing.Color.White;
-            this.btnMedicamento.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,11 +440,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Principal";
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
