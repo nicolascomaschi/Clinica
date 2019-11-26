@@ -13,10 +13,10 @@ namespace Datos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ClinicaEntities : DbContext
+    public partial class ClinicaEntities1 : DbContext
     {
-        public ClinicaEntities()
-            : base("name=ClinicaEntities")
+        public ClinicaEntities1()
+            : base("name=ClinicaEntities1")
         {
         }
     
@@ -33,8 +33,6 @@ namespace Datos
         public virtual DbSet<Paciente> Paciente { get; set; }
         public virtual DbSet<Tratamiento> Tratamiento { get; set; }
         public virtual DbSet<TratamientoDetalle> TratamientoDetalle { get; set; }
-        public virtual DbSet<TratamientoDetalleMedicamento> TratamientoDetalleMedicamento { get; set; }
-        public virtual DbSet<TratamientoMedicamento> TratamientoMedicamento { get; set; }
         public virtual DbSet<Turno> Turno { get; set; }
     }
 }

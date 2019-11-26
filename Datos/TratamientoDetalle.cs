@@ -14,12 +14,6 @@ namespace Datos
     
     public partial class TratamientoDetalle
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TratamientoDetalle()
-        {
-            this.TratamientoDetalleMedicamento = new HashSet<TratamientoDetalleMedicamento>();
-        }
-    
         public int idTratamientoDetalle { get; set; }
         public int idTratamiento { get; set; }
         public string sintomas { get; set; }
@@ -27,8 +21,7 @@ namespace Datos
         public Nullable<int> idMedicamento { get; set; }
         public Nullable<System.DateTime> fecha { get; set; }
     
+        public virtual Medicamento Medicamento { get; set; }
         public virtual Tratamiento Tratamiento { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TratamientoDetalleMedicamento> TratamientoDetalleMedicamento { get; set; }
     }
 }

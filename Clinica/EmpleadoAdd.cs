@@ -64,6 +64,7 @@ namespace Clinica
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            
             string msj;
             if (id == null)
             {
@@ -82,7 +83,8 @@ namespace Clinica
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            
+            
         }
     }
 }

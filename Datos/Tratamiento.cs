@@ -18,14 +18,12 @@ namespace Datos
         public Tratamiento()
         {
             this.TratamientoDetalle = new HashSet<TratamientoDetalle>();
-            this.TratamientoMedicamento = new HashSet<TratamientoMedicamento>();
         }
     
         public int idTratamiento { get; set; }
         public string tratamiento1 { get; set; }
         public string diagnosticoFinal { get; set; }
         public System.DateTime fecha { get; set; }
-        public Nullable<int> idMedicamento { get; set; }
         public int idMedico { get; set; }
         public int idPaciente { get; set; }
     
@@ -33,7 +31,5 @@ namespace Datos
         public virtual Paciente Paciente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TratamientoDetalle> TratamientoDetalle { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TratamientoMedicamento> TratamientoMedicamento { get; set; }
     }
 }

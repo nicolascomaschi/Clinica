@@ -53,13 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers.cs" />
+    <Compile Include="Interfaces\IContract.cs" />
+    <Compile Include="Interfaces\IContractDetalle.cs" />
     <Compile Include="LEmpleado.cs" />
     <Compile Include="LEspecialidad.cs" />
     <Compile Include="LMedicamento.cs" />
     <Compile Include="LMedico.cs" />
     <Compile Include="LObraSocial.cs" />
     <Compile Include="LPaciente.cs" />
+    <Compile Include="LTratamiento.cs" />
     <Compile Include="LTurno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\EmpleadoView.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="Views\MedicoView.cs" />
     <Compile Include="Views\ObraSocialView.cs" />
     <Compile Include="Views\PacienteView.cs" />
+    <Compile Include="Views\TratamientoDetalleView.cs" />
+    <Compile Include="Views\TratamientoView.cs" />
     <Compile Include="Views\TurnoView.cs" />
   </ItemGroup>
   <ItemGroup>

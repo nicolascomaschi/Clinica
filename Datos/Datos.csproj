@@ -93,12 +93,6 @@
     <Compile Include="TratamientoDetalle.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TratamientoDetalleMedicamento.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TratamientoMedicamento.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Turno.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

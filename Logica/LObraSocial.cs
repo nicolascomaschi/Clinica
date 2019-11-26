@@ -7,7 +7,7 @@ namespace Logica
 {
     public class LObraSocial
     {
-        ClinicaEntities ctx = new ClinicaEntities();
+        ClinicaEntities1 ctx = new ClinicaEntities1();
         public List<ObraSocialView> Mostrar()
         {
             var list = from os in ctx.ObraSocial

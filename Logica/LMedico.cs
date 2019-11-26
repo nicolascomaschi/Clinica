@@ -7,7 +7,7 @@ namespace Logica
 {
     public class LMedico
     {
-        ClinicaEntities ctx = new ClinicaEntities();
+        ClinicaEntities1 ctx = new ClinicaEntities1();
         public List<MedicoView> Mostrar()
         {
             var list = from m in ctx.Medico

@@ -112,5 +112,18 @@ namespace Clinica
             this.panelContenedor.Tag = hijo1;
             hijo1.Show();
         }
+
+        private void BtnTratamiento_Click(object sender, EventArgs e)
+        {
+            if (this.panelContenedor.Controls.Count > 0) this.panelContenedor.Controls.RemoveAt(0);
+            Tratamiento form = Application.OpenForms.OfType<Tratamiento>().FirstOrDefault();
+            Tratamiento hijo1 = form ?? new Tratamiento();
+            hijo1.TopLevel = false;
+            hijo1.FormBorderStyle = FormBorderStyle.None;
+            hijo1.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(hijo1);
+            this.panelContenedor.Tag = hijo1;
+            hijo1.Show();
+        }
     }
 }

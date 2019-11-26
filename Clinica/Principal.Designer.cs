@@ -197,7 +197,7 @@
             this.btnTratamiento.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnTratamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTratamiento.BorderRadius = 0;
-            this.btnTratamiento.ButtonText = "Tratamientos";
+            this.btnTratamiento.ButtonText = "Historia clinica";
             this.btnTratamiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTratamiento.DisabledColor = System.Drawing.Color.Gray;
             this.btnTratamiento.Iconcolor = System.Drawing.Color.Transparent;
@@ -220,10 +220,11 @@
             this.btnTratamiento.selected = false;
             this.btnTratamiento.Size = new System.Drawing.Size(158, 70);
             this.btnTratamiento.TabIndex = 5;
-            this.btnTratamiento.Text = "Tratamientos";
+            this.btnTratamiento.Text = "Historia clinica";
             this.btnTratamiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTratamiento.Textcolor = System.Drawing.Color.White;
             this.btnTratamiento.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTratamiento.Click += new System.EventHandler(this.BtnTratamiento_Click);
             // 
             // tableLayoutPanel2
             // 

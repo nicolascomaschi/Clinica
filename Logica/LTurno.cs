@@ -7,7 +7,7 @@ namespace Logica
 {
     public class LTurno
     {
-        ClinicaEntities ctx = new ClinicaEntities();
+        ClinicaEntities1 ctx = new ClinicaEntities1();
         public List<TurnoView> Mostrar()
         {
             var list = from t in ctx.Turno
